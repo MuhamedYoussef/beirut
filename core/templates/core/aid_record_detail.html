@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<main class="container" style="padding-top: 5vh;">
+  <a href="{% url 'aid_record_list' %}"> < Back</a>
+  <h3 class="text-center mt-5">{{record.name}}</h3>
+
+
+  <section class="rounded shadow-sm p-3 mt-3">
+    <div class="row">
+      <div class="col-12 col-md-7">
+        <p class="m-0">name: {{record.name}}</p>
+        <p class="m-0">email: {{record.email}}</p>
+        <p class="m-0">phone: {{record.phone}}</p>
+        <p class="m-0">whatsapp: {{record.whatsapp}}</p>
+        <p class="m-0">residents: {{record.residents}}</p>
+        <p class="m-0">occupation: {{record.occupation}}</p>
+        <p class="m-0">income: {{record.income}}</p>
+        <p class="m-0">age: {{record.age}}</p>
+      </div>
+
+      <div class="col-12 col-md-5">
+        <img class="rounded" src="/media/{{record.national_id}}" alt="national_id">
+      </div>
+    </div>
+
+
+  </section>
+  
+  
+
+  <section class="rounded shadow-sm p-3 mt-3">
+    <p class="text-uppercase m-0">rooms: {{record.rooms}}</p>
+  
+    <div class="mt-3">
+      room1
+      <img class="rounded" src="/media/{{record.room1}}" alt="room1">
+    </div>
+    <div class="mt-3">
+      room2
+      <img class="rounded" src="/media/{{record.room2}}" alt="room2">
+    </div>
+    <div class="mt-3">
+      room3
+      <img class="rounded" src="/media/{{record.room3}}" alt="room3">
+    </div>
+  </section>
+
+
+  <section class="rounded shadow-sm p-3 mt-3">
+    <p class="text-uppercase m-0">livingrooms: {{record.livingrooms}}</p>
+  
+    <div class="mt-3">
+      livingroom1
+      <img class="rounded" src="/media/{{record.livingroom1}}" alt="livingroom1">
+    </div>
+    <div class="mt-3">
+      livingroom2
+      <img class="rounded" src="/media/{{record.livingroom2}}" alt="livingroom2">
+    </div>
+  </section>
+
+
+  <section class="rounded shadow-sm p-3 mt-3">
+    <div class="mt-3">
+      kitchen
+      <img class="rounded" src="/media/{{record.kitchen}}" alt="kitchen">
+    </div>
+  </section>
+
+  
+</main>
+{% endblock %}

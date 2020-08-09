@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<main class="container" style="padding-top: 5vh;">
+
+  <h3 class="text-center">Please fill in below form</h3>
+
+  
+  <form class="mx-auto my-5" style="max-width: 50rem;" method="POST" enctype="multipart/form-data">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-danger" role="alert">
+      {{message}}
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    
+    {% csrf_token %}
+    <!-- Personal info -->
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+      <div class="invalid-feedback"></div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+      <div class="invalid-feedback"></div>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="text" class="form-control" id="phone" name="phone" required>
+      <div class="invalid-feedback"></div>
+    </div>
+    <div class="form-group">
+      <label for="whatsapp">WhatsApp Number</label>
+      <input type="text" class="form-control" id="whatsapp" name="whatsapp" required>
+      <div class="invalid-feedback"></div>
+    </div>
+    
+    <div class="form-group">
+      <label for="residents">
+        Number of Residents in the affected residence (How many people live and sleep here?)
+      </label>
+      <input type="number" class="form-control" id="residents" name="residents" required>
+      <div class="invalid-feedback"></div>
+    </div>
+
+    <!-- rooms info -->
+    <section class="my-5 py-3">
+      <div class="form-group">
+        <label for="rooms">Number of Rooms</label>
+        <input type="number" class="form-control" id="rooms" name="rooms" required>
+        <div class="invalid-feedback"></div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <label for="room1">Room 1</label>
+          <input type="file" name="room1" id="room1" required>
+          <div class="invalid-feedback"></div>
+        </div>
+        <div class="col-12 col-md-4">
+          <label for="room2">Room 2</label>
+          <input type="file" name="room2" id="room2" required>
+          <div class="invalid-feedback"></div>
+        </div>
+        <div class="col-12 col-md-4">
+          <label for="room3">Room 3</label>
+          <input type="file" name="room3" id="room3" required>
+          <div class="invalid-feedback"></div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- living rooms info -->
+    <section class="my-5 py-3">
+      <div class="form-group">
+        <label for="livingrooms">Number of Living Rooms</label>
+        <input type="number" class="form-control" id="livingrooms" name="livingrooms" required>
+        <div class="invalid-feedback"></div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <label for="livingroom1">Room 1</label>
+          <input type="file" name="livingroom1" id="livingroom1" required>
+          <div class="invalid-feedback"></div>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="livingroom2">Room 2</label>
+          <input type="file" name="livingroom2" id="livingroom2" required>
+          <div class="invalid-feedback"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="my-5">
+      <label class="d-block" for="kitchen">Kitchen</label>
+      <input type="file" name="kitchen" id="kitchen" required>
+      <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="my-5">
+      <label class="d-block" for="national_id">Copy of your Identity Card (Optional)</label>
+      <input type="file" name="national_id" id="national_id" required>
+      <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="occupation">Occupation</label>
+      <input type="text" class="form-control" id="occupation" name="occupation" required>
+      <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="income">Annual Income</label>
+      <input type="number" class="form-control" id="income" name="income" required>
+      <div class="invalid-feedback"></div>
+    </div>
+    
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="number" class="form-control" id="age" name="age" required>
+      <div class="invalid-feedback"></div>
+    </div>
+    
+    <div class="py-3">
+      <button class="btn btn-primary btn-block">Submit</button>
+    </div>
+  </form>
+</main>
+{% endblock %}
+
+
+{% block js %}
+<script>
+  // Accept images only
+  document.querySelectorAll('input').forEach(i => i.setAttribute('accept', 'image/x-png,image/gif,image/jpeg'));
+</script>
+{% endblock %}

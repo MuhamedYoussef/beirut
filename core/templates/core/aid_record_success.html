@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<main class="container" style="padding-top: 20vh;">
+  <h3 class="text-center text-success">You request submitted</h3>
+  
+  <div class="row mt-5 mx-auto pt-5" style="max-width: 35rem;">
+    <div class="col">
+      <a class="btn btn-outline-secondary btn-block" href="{% url 'index' %}">Go back</a>
+    </div>
+    <div class="col">
+      <a class="btn btn-primary btn-block" href="{% url 'aid_record' %}">Submit another request</a>
+    </div>
+  </div>
+</main>
+{% endblock %}

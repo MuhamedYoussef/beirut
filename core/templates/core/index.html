@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<main class="container" style="padding-top: 20vh;">
+  <h1 class="text-center">
+    Support Beirut
+    <!-- <img class="flag" src="https://cdn.countryflags.com/thumbs/lebanon/flag-3d-round-250.png" alt="flag"> -->
+    <img class="flag ml-3" src="https://images-na.ssl-images-amazon.com/images/I/31veVzJonbL._AC_.jpg" alt="flag">
+  </h1>
+  
+  <p class="lead text-center mt-5">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+
+  <div class="row" style="margin-top: 15vh;">
+    <div class="col">
+      <a href="{% url 'aid_record' %}" class="btn btn-lg btn-outline-info btn-block">I need help</a>
+    </div>
+    <div class="col">
+      <a href="{% url 'aid_record_list' %}" class="btn btn-lg btn-outline-success btn-block">I'm here to help</a>
+    </div>
+  </div>
+</main>
+{% endblock %}
