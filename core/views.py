@@ -18,10 +18,10 @@ class AidRecordView(APIView):
         
         if serializer.is_valid():
             serializer.save()
-            return redirect('aid_record')
+            return redirect('aid_record_success')
         
         messages.error(request, 'Something went wrong! Please try again')
-        return redirect('aid_record_success')
+        return redirect('aid_record')
 
 
 class AidRecordListView(APIView):
