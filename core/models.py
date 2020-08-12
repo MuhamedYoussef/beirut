@@ -29,3 +29,14 @@ class AidRecord(models.Model):
     
     def get_absolute_url(self):
         return reverse('aid_record_detail', kwargs={'id': self.id})
+
+
+
+
+class Offer(models.Model):
+    aid = models.ForeignKey(AidRecord, related_name='offers', on_delete=models.CASCADE)
+    name = models.CharField(max_length=200)
+    email = models.EmailField()
+    phone = models.CharField(max_length=200)
+    occupation = models.CharField(max_length=200)
+    description = models.TextField()

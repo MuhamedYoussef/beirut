@@ -1,11 +1,10 @@
 from django.contrib import messages
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from rest_framework.views import APIView
 
-from .models import AidRecord
-from .serializers import AidRecordSerializer
-
-
+from .models import AidRecord, Offer
+from .serializers import *
 
 
 class AidRecordView(APIView):
@@ -36,3 +35,21 @@ class AidRecordDetailView(APIView):
     def get(self, request, id):
         record = get_object_or_404(AidRecord, id=id)
         return render(request, 'core/aid_record_detail.html', {'record': record})
+
+
+
+
+
+
+
+
+
+class OfferView(APIView):
+
+    def post(self, request):
+        serializer = OfferSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse({'msg': 'success'})
+        print(serializer.errors)
+        return JsonResponse({'msg': 'Something wrong happend'}, status=400)
