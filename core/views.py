@@ -19,7 +19,7 @@ class AidRecordView(APIView):
             serializer.save()
             return redirect('aid_record_success')
         
-        messages.error(request, 'Something went wrong! Please try again')
+        messages.error(request, 'Already submited a request for this user')
         return redirect('aid_record')
 
 
@@ -35,9 +35,6 @@ class AidRecordDetailView(APIView):
     def get(self, request, id):
         record = get_object_or_404(AidRecord, id=id)
         return render(request, 'core/aid_record_detail.html', {'record': record})
-
-
-
 
 
 

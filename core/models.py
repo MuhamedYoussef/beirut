@@ -15,7 +15,7 @@ class AidRecord(models.Model):
     livingroom1 = models.ImageField(upload_to='images')
     livingroom2 = models.ImageField(upload_to='images')
     kitchen = models.ImageField(upload_to='images')
-    national_id = models.ImageField(upload_to='images')
+    national_id = models.ImageField(upload_to='images', blank=True, null=True)
     occupation = models.CharField(max_length=200)
     income = models.CharField(max_length=200)
     age = models.CharField(max_length=200)

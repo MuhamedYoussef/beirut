@@ -3,30 +3,29 @@
 
 {% block content %}
 <main class="container" style="padding-top: 5vh;">
-  <h3 class="text-center">List</h3>
+  <a href="{% url 'index' %}"> < Back</a>
+
+  <div class="mt-5">
+    <h4 class="mb-4">Beirut affected individuals</h4>
+    {% for record in records %}
+    <div class="shadow-sm rounded p-3 user-select-none border mt-3" role="button" onclick="location.replace('{{record.get_absolute_url}}')">
+      <h5>{{record.name}}</h5>
   
-  {% for record in records %}
-  <div class="shadow-sm rounded p-3 user-select-none" role="button" onclick="location.replace('{{record.get_absolute_url}}')">
-    <h4>{{record.name}}</h4>
-
-    <section class="row mt-3">
-      <div class="col-12 col-md-6">
-        <p class="text-muted m-0">Email: {{record.email}}</p>
-        <p class="text-muted m-0">Residents: {{record.residents}}</p>
-      </div>
-
-      <div class="col-12 col-md-6">
-        <p class="text-muted m-0">Occupation: {{record.occupation}}</p>
-        <p class="text-muted m-0">Income: {{record.income}}</p>
-        <p class="text-muted m-0">Age: {{record.age}}</p>
-      </div>
-
-
-      
-    </section>
-
+      <section class="row mt-3">
+        <div class="col-12 col-md-6">
+          <p class="text-muted m-0">Email: {{record.email}}</p>
+          <p class="text-muted m-0">Residents: {{record.residents}}</p>
+        </div>
+  
+        <div class="col-12 col-md-6">
+          <p class="text-muted m-0">Occupation: {{record.occupation}}</p>
+          <p class="text-muted m-0">Income: {{record.income}}</p>
+          <p class="text-muted m-0">Age: {{record.age}}</p>
+        </div>
+      </section>
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
   
 </main>
 {% endblock %}

@@ -3,6 +3,7 @@
 
 {% block content %}
 <main class="container" style="padding-top: 5vh;">
+  <a href="{% url 'index' %}"> < Back</a>
 
   <h3 class="text-center">Please fill in below form</h3>
 
@@ -23,35 +24,50 @@
       <!-- <label for="name">Name</label> -->
       <label class="d-flex" for="name">
         <span>Name</span>
-        <span class="ml-auto">الاسم</span>
+        <span class="ml-auto text-right text-ar">الاسم</span>
       </label>
       <input type="text" class="form-control" id="name" name="name" required>
       <div class="invalid-feedback"></div>
     </div>
     <div class="form-group">
       <!-- <label for="email">Email</label> -->
-      <label class="d-flex" for="name">
+      <label class="d-flex" for="email">
         <span>Email</span>
-        <span class="ml-auto">البريد الإلكتروني</span>
+        <span class="ml-auto text-right text-ar">البريد الإلكتروني</span>
       </label>
       <input type="email" class="form-control" id="email" name="email" required>
       <div class="invalid-feedback"></div>
     </div>
     <div class="form-group">
-      <label for="phone">Phone Number</label>
+      <!-- <label for="phone">Phone Number</label> -->
+      <label class="d-flex" for="phone">
+        <span>Phone Number</span>
+        <span class="ml-auto text-right text-ar">رقم الهاتف</span>
+      </label>
       <input type="text" class="form-control" id="phone" name="phone" required>
       <div class="invalid-feedback"></div>
     </div>
     <div class="form-group">
-      <label for="whatsapp">WhatsApp Number</label>
+      <!-- <label for="whatsapp">WhatsApp Number</label> -->
+      <label class="d-flex" for="whatsapp">
+        <span>WhatsApp Number</span>
+        <span class="ml-auto text-right text-ar">رقم واتساب</span>
+      </label>
       <input type="text" class="form-control" id="whatsapp" name="whatsapp" required>
       <div class="invalid-feedback"></div>
     </div>
     
     <div class="form-group">
-      <label for="residents">
+      <!-- <label for="residents">
         Number of Residents in the affected residence (How many people live and sleep here)?
+      </label> -->
+      <label class="d-flex" for="residents">
+        <span>Number of Residents in the affected residence (How many people live and sleep here)?</span>
+        <span class="ml-auto text-right text-ar">
+          عدد المقيمين في السكن المتضرر (كم عدد الأشخاص الذين يعيشون وينامون هنا)؟
+        </span>
       </label>
+
       <input type="number" class="form-control" id="residents" name="residents" required>
       <div class="invalid-feedback"></div>
     </div>
@@ -59,24 +75,41 @@
     <!-- rooms info -->
     <section class="my-5 py-3">
       <div class="form-group">
-        <label for="rooms">Number of Rooms</label>
+        <!-- <label for="rooms">Number of Rooms</label> -->
+        <label class="d-flex" for="rooms">
+          <span>Number of Rooms</span>
+          <span class="ml-auto text-right text-ar">عدد الغرف</span>
+        </label>
         <input type="number" class="form-control" id="rooms" name="rooms" required>
         <div class="invalid-feedback"></div>
       </div>
   
       <div class="row">
         <div class="col-12 col-md-4">
-          <label for="room1">Room 1</label>
+          
+          <!-- <label for="room1">Room 1</label> -->
+          <label class="d-flex" for="room1">
+            <span>Room 1</span>
+            <span class="ml-auto text-right text-ar">غرفة 1</span>
+          </label>
           <input type="file" name="room1" id="room1" required>
           <div class="invalid-feedback"></div>
         </div>
         <div class="col-12 col-md-4">
-          <label for="room2">Room 2</label>
+          <!-- <label for="room2">Room 2</label> -->
+          <label class="d-flex" for="room2">
+            <span>Room 2</span>
+            <span class="ml-auto text-right text-ar">غرفة 2</span>
+          </label>
           <input type="file" name="room2" id="room2" required>
           <div class="invalid-feedback"></div>
         </div>
         <div class="col-12 col-md-4">
-          <label for="room3">Room 3</label>
+          <!-- <label for="room3">Room 3</label> -->
+          <label class="d-flex" for="room3">
+            <span>Room 3</span>
+            <span class="ml-auto text-right text-ar">غرفة 3</span>
+          </label>
           <input type="file" name="room3" id="room3" required>
           <div class="invalid-feedback"></div>
         </div>
@@ -87,19 +120,31 @@
     <!-- living rooms info -->
     <section class="my-5 py-3">
       <div class="form-group">
-        <label for="livingrooms">Number of Living Rooms</label>
+        <!-- <label for="livingrooms">Number of Living Rooms</label> -->
+        <label class="d-flex" for="livingrooms">
+          <span>Number of Living Rooms</span>
+          <span class="ml-auto text-right text-ar">عدد غرف المعيشة</span>
+        </label>
         <input type="number" class="form-control" id="livingrooms" name="livingrooms" required>
         <div class="invalid-feedback"></div>
       </div>
   
       <div class="row">
         <div class="col-12 col-md-6">
-          <label for="livingroom1">Room 1</label>
+          <!-- <label for="livingroom1">Room 1</label> -->
+          <label class="d-flex" for="livingroom1">
+            <span>Room 1</span>
+            <span class="ml-auto text-right text-ar">غرفة 1</span>
+          </label>
           <input type="file" name="livingroom1" id="livingroom1" required>
           <div class="invalid-feedback"></div>
         </div>
         <div class="col-12 col-md-6">
-          <label for="livingroom2">Room 2</label>
+          <!-- <label for="livingroom2">Room 2</label> -->
+          <label class="d-flex" for="livingroom2">
+            <span>Room 2</span>
+            <span class="ml-auto text-right text-ar">غرفة 2</span>
+          </label>
           <input type="file" name="livingroom2" id="livingroom2" required>
           <div class="invalid-feedback"></div>
         </div>
@@ -108,37 +153,57 @@
 
 
     <div class="my-5">
-      <label class="d-block" for="kitchen">Kitchen</label>
+      <!-- <label class="d-block" for="kitchen">Kitchen</label> -->
+      <label class="d-flex" for="kitchen">
+        <span>Kitchen</span>
+        <span class="ml-auto text-right text-ar">المطبخ</span>
+      </label>
       <input type="file" name="kitchen" id="kitchen" required>
       <div class="invalid-feedback"></div>
     </div>
 
     <div class="my-5">
-      <label class="d-block" for="national_id">Copy of your Identity Card (Optional)</label>
-      <input type="file" name="national_id" id="national_id" required>
+      <!-- <label class="d-block" for="national_id">Copy of your Identity Card (Optional)</label> -->
+      <label class="d-flex" for="national_id">
+        <span>Copy of your Identity Card (Optional)</span>
+        <span class="ml-auto text-right text-ar">نسخة من بطاقة التعريف (اختياري)</span>
+      </label>
+      <input type="file" name="national_id" id="national_id">
       <div class="invalid-feedback"></div>
     </div>
 
     <div class="form-group">
-      <label for="occupation">Occupation</label>
+      <!-- <label for="occupation">Occupation</label> -->
+      <label class="d-flex" for="occupation">
+        <span>Occupation</span>
+        <span class="ml-auto text-right text-ar">مهنة</span>
+      </label>
       <input type="text" class="form-control" id="occupation" name="occupation" required>
       <div class="invalid-feedback"></div>
     </div>
 
     <div class="form-group">
-      <label for="income">Annual Income</label>
+      <!-- <label for="income">Annual Income</label> -->
+      <label class="d-flex" for="income">
+        <span>Annual Income</span>
+        <span class="ml-auto text-right text-ar">الدخل السنوي</span>
+      </label>
       <input type="number" class="form-control" id="income" name="income" required>
       <div class="invalid-feedback"></div>
     </div>
     
     <div class="form-group">
-      <label for="age">Age</label>
+      <!-- <label for="age">Age</label> -->
+      <label class="d-flex" for="age">
+        <span>Age</span>
+        <span class="ml-auto text-right text-ar">العمر</span>
+      </label>
       <input type="number" class="form-control" id="age" name="age" required>
       <div class="invalid-feedback"></div>
     </div>
     
     <div class="py-3">
-      <button class="btn btn-primary btn-block">Submit</button>
+      <button class="btn btn-primary btn-block text-ar font-weight-bold">Submit - إرسال</button>
     </div>
   </form>
 </main>
