@@ -21,7 +21,6 @@
     {% csrf_token %}
     <!-- Personal info -->
     <div class="form-group">
-      <!-- <label for="name">Name</label> -->
       <label class="d-flex" for="name">
         <span>Name</span>
         <span class="ml-auto text-right text-ar">الاسم</span>
@@ -30,7 +29,6 @@
       <div class="invalid-feedback"></div>
     </div>
     <div class="form-group">
-      <!-- <label for="email">Email</label> -->
       <label class="d-flex" for="email">
         <span>Email</span>
         <span class="ml-auto text-right text-ar">البريد الإلكتروني</span>
@@ -39,7 +37,6 @@
       <div class="invalid-feedback"></div>
     </div>
     <div class="form-group">
-      <!-- <label for="phone">Phone Number</label> -->
       <label class="d-flex" for="phone">
         <span>Phone Number</span>
         <span class="ml-auto text-right text-ar">رقم الهاتف</span>
@@ -48,7 +45,6 @@
       <div class="invalid-feedback"></div>
     </div>
     <div class="form-group">
-      <!-- <label for="whatsapp">WhatsApp Number</label> -->
       <label class="d-flex" for="whatsapp">
         <span>WhatsApp Number</span>
         <span class="ml-auto text-right text-ar">رقم واتساب</span>
@@ -56,11 +52,17 @@
       <input type="text" class="form-control" id="whatsapp" name="whatsapp" required>
       <div class="invalid-feedback"></div>
     </div>
+
+    <div class="form-group">
+      <label class="d-flex" for="address">
+        <span>Address</span>
+        <span class="ml-auto text-right text-ar">عنوان</span>
+      </label>
+      <input type="text" class="form-control" id="address" name="address" required>
+      <div class="invalid-feedback"></div>
+    </div>
     
     <div class="form-group">
-      <!-- <label for="residents">
-        Number of Residents in the affected residence (How many people live and sleep here)?
-      </label> -->
       <label class="d-flex" for="residents">
         <span>Number of Residents in the affected residence (How many people live and sleep here)?</span>
         <span class="ml-auto text-right text-ar">
@@ -75,7 +77,6 @@
     <!-- rooms info -->
     <section class="my-5 py-3">
       <div class="form-group">
-        <!-- <label for="rooms">Number of Rooms</label> -->
         <label class="d-flex" for="rooms">
           <span>Number of Rooms</span>
           <span class="ml-auto text-right text-ar">عدد الغرف</span>
@@ -87,7 +88,6 @@
       <div class="row">
         <div class="col-12 col-md-4">
           
-          <!-- <label for="room1">Room 1</label> -->
           <label class="d-flex" for="room1">
             <span>Room 1</span>
             <span class="ml-auto text-right text-ar">غرفة 1</span>
@@ -96,7 +96,6 @@
           <div class="invalid-feedback"></div>
         </div>
         <div class="col-12 col-md-4">
-          <!-- <label for="room2">Room 2</label> -->
           <label class="d-flex" for="room2">
             <span>Room 2</span>
             <span class="ml-auto text-right text-ar">غرفة 2</span>
@@ -105,7 +104,6 @@
           <div class="invalid-feedback"></div>
         </div>
         <div class="col-12 col-md-4">
-          <!-- <label for="room3">Room 3</label> -->
           <label class="d-flex" for="room3">
             <span>Room 3</span>
             <span class="ml-auto text-right text-ar">غرفة 3</span>
@@ -120,7 +118,6 @@
     <!-- living rooms info -->
     <section class="my-5 py-3">
       <div class="form-group">
-        <!-- <label for="livingrooms">Number of Living Rooms</label> -->
         <label class="d-flex" for="livingrooms">
           <span>Number of Living Rooms</span>
           <span class="ml-auto text-right text-ar">عدد غرف المعيشة</span>
@@ -131,7 +128,6 @@
   
       <div class="row">
         <div class="col-12 col-md-6">
-          <!-- <label for="livingroom1">Room 1</label> -->
           <label class="d-flex" for="livingroom1">
             <span>Room 1</span>
             <span class="ml-auto text-right text-ar">غرفة 1</span>
@@ -140,7 +136,6 @@
           <div class="invalid-feedback"></div>
         </div>
         <div class="col-12 col-md-6">
-          <!-- <label for="livingroom2">Room 2</label> -->
           <label class="d-flex" for="livingroom2">
             <span>Room 2</span>
             <span class="ml-auto text-right text-ar">غرفة 2</span>
@@ -153,7 +148,6 @@
 
 
     <div class="my-5">
-      <!-- <label class="d-block" for="kitchen">Kitchen</label> -->
       <label class="d-flex" for="kitchen">
         <span>Kitchen</span>
         <span class="ml-auto text-right text-ar">المطبخ</span>
@@ -163,7 +157,6 @@
     </div>
 
     <div class="my-5">
-      <!-- <label class="d-block" for="national_id">Copy of your Identity Card (Optional)</label> -->
       <label class="d-flex" for="national_id">
         <span>Copy of your Identity Card (Optional)</span>
         <span class="ml-auto text-right text-ar">نسخة من بطاقة التعريف (اختياري)</span>
@@ -173,7 +166,6 @@
     </div>
 
     <div class="form-group">
-      <!-- <label for="occupation">Occupation</label> -->
       <label class="d-flex" for="occupation">
         <span>Occupation</span>
         <span class="ml-auto text-right text-ar">مهنة</span>
@@ -183,7 +175,6 @@
     </div>
 
     <div class="form-group">
-      <!-- <label for="income">Annual Income</label> -->
       <label class="d-flex" for="income">
         <span>Annual Income</span>
         <span class="ml-auto text-right text-ar">الدخل السنوي</span>
@@ -193,7 +184,6 @@
     </div>
     
     <div class="form-group">
-      <!-- <label for="age">Age</label> -->
       <label class="d-flex" for="age">
         <span>Age</span>
         <span class="ml-auto text-right text-ar">العمر</span>

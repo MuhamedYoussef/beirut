@@ -6,6 +6,7 @@ class AidRecord(models.Model):
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=200, unique=True)
     whatsapp = models.CharField(max_length=200)
+    address = models.CharField(max_length=200)
     residents = models.CharField(max_length=200)
     rooms = models.CharField(max_length=200)
     room1 = models.ImageField(upload_to='images')
